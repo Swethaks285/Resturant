@@ -25,7 +25,7 @@ const Header = ({cartItems}) => {
   return (
     <header className="p-4 d-flex flex-row align-items-center nav-header">
       <h1 className="m-0 logo-heading">UNI Resto Cafe</h1>
-      <div className="d-flex flex-row align-items-center ms-auto">
+      <div className="d-flex flex-row align-items-center ms-auto h1">
         <p className="mt-0 mb-0 me-2 d-none d-sm-block my-orders-text">
           My Orders
         </p>
