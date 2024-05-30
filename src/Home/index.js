@@ -63,9 +63,8 @@ const Home = () => {
     }))
 
   const fetchRestaurantApi = async () => {
-    const api = 'https://run.mocky.io/v3/77a7e71b-804a-4fbd-822c-3e365d3482cc'
+    const api = 'https://run.mocky.io/v3/72562bef-1d10-4cf5-bd26-8b0c53460a8e'
     const apiResponse = await fetch(api)
-    console.log(apiResponse.statusCode)
     const data = await apiResponse.json()
     const updatedData = getUpdatedData(data[0].table_menu_list)
     setResponse(updatedData)
@@ -137,7 +136,9 @@ const Home = () => {
   ) : (
     <div className="home-background">
       <Header cartItems={cartItems} />
-      <ul className="m-0 ps-0 d-flex tab-container">{renderTabMenuList()}</ul>
+      <ul className="m-0 ps-0 d-flex tab-container tab">
+        {renderTabMenuList()}
+      </ul>
       {renderDishes()}
     </div>
   )
